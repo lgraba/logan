@@ -18,3 +18,9 @@
 
 # Ignore Ruby environment secret keys
 /config/secrets.yml
+
+# Ignore pre-mature Mockup
+/Mockup/
+
+# Ignore planning.md (included it in README.md)
+planning.md

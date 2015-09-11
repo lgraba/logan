@@ -1,0 +1,196 @@
+// _side.css.scss
+// The sidebar navigation
+// Note: Add mixins and variables before any more styling
+
+#side {
+	width: 400px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	// Home link
+	#home {
+		background: #3D3F4E;
+		height: 10vh;
+		width: 100%;
+		display: table;
+		border: 1px solid #FFFFFF;
+		padding: 0 2rem;
+		transition: all .3s ease-in-out;
+		border-radius: 3px;
+
+		.inner {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+
+			h2 {
+				font-size: 2em;
+				color: #73768F;
+				text-transform: uppercase;
+				margin: 0;
+
+				span {
+					color: #FFF;
+					display: block;
+					font-weight: 700;
+				}
+			}
+		}
+
+		&:hover {
+			background: #72BBD8;
+
+			.inner {
+				h2 {
+					color: #C4EDFF;
+				}
+			}
+		}
+
+		// Currently active homepage link
+		&.current {
+			background: #72BBD8;
+
+			.inner {
+				h2 {
+					color: #C4EDFF;
+				}
+			}
+		}
+	}
+
+	// Projects link
+	#projects {
+		background: #3D3F4E;
+		height: 40vh;
+		display: table;
+		border: 1px solid #FFFFFF;
+		padding: 0 3.5rem;
+		transition: all .3s ease-in-out;
+		border-radius: 3px;
+
+		.inner {
+			display: table-cell;
+			vertical-align: middle;
+
+			h2 {
+				font-size: 1.75em;
+				color: #73768F;
+				margin: 0;
+
+				span {
+					font-size: 1.5em;
+					color: #FFF;
+					display: block;
+					/** text-transform: uppercase; */
+					border: 2px solid #fff;
+					border-radius: 3px;
+					text-align: center;
+				}
+			}
+		}
+
+		&:hover {
+			background: #72BBD8;
+
+			.inner {
+				h2 {
+					color: #C4EDFF;
+				}
+			}
+		}
+
+		// Currently active projects link
+		&.current {
+			background: #72BBD8;
+
+			.inner {
+				h2 {
+					color: #C4EDFF;
+				}
+			}
+		}
+	}
+
+	// Bottom links in sidebar
+	#bottom {
+		.left, .right {
+			float: left;
+		}
+		.resume, .contact, .github, .twitter, .about {
+			border: 1px solid #FFFFFF;
+			display: table;
+			transition: all .3s ease-in-out;
+			border-radius: 3px;
+
+			.inner {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				color: #FFF;
+			}
+
+			i {
+				font-size: 1.75em;
+			}
+		}
+
+		// Resume Link
+		.resume {
+			height: 50vh;
+			width: 200px;
+			background: #494C5E;
+			font-size: 1.25em;
+
+			&:hover {
+				background: #CC181E;
+			}
+		}
+
+		// Contact Link
+		.contact {
+			width: 200px;
+			height: 17.5vh;
+			background: #5A5E73;
+
+			&:hover {
+				background: #EA4C89;
+			}
+		}
+
+		// Github Link
+		.github {
+			width: 100px;
+			height: 32.5vh;
+			background: #3D3F4E;
+
+			&:hover {
+				background: #333333; // Github Grey
+			}
+		}
+
+		// TWitter Link
+		.twitter {
+			width: 100px;
+			height: 20vh;
+			background: #494C5E;
+
+			&:hover {
+				background: #55ACEE; // Twitter Blue
+			}
+		}
+
+		// About Link
+		.about {
+			width: 100px;
+			height: 12.5vh;
+			background: #5A5E73;
+
+			&:hover {
+				background: #57AD68;
+			}
+		}
+	}
+}

@@ -17,7 +17,8 @@
 /tmp
 
 # Ignore Ruby environment secret keys
-/config/secrets.yml
+# Commented this out for deployment to Heroku
+# /config/secrets.yml
 
 # Ignore pre-mature Mockup
 /Mockup/

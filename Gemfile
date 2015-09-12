@@ -38,6 +38,8 @@ gem 'haml', '~> 4.0.7'
 gem 'redcarpet', '~> 3.3.2'
 # Pygments for syntax highlighing after parsing
 gem 'pygments.rb', '~> 0.6.3'
+# Friendly ID for human- and SEO-friendly permalinks
+gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

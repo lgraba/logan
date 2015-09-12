@@ -95,3 +95,23 @@ This will be a personal site for myself!
     - Link "Resume" To resume page
   - Find some good stock photots
   - Greyscale with small splashes of color
+
+### ToDo
+1. Projects: Image(s) Attachment
+  - Multiple images?
+  - Images throughout project post?
+2. Projects: Tags
+  - Available gems for tagging?
+3. Authentication of administrator and protection of administrator areas
+4. Resume page
+5. About page
+6. Contact form page
+  - Keep list of email addresses submitted in database? Would need new model.
+7. Styling
+  - Projects
+  - Project#show
+  - Resume - HTML version of resume - simple
+  - About - picture of me?
+  - Site-wide colors (make variables in SCSS)
+  - Refactor SCSS already written
+  - Forms

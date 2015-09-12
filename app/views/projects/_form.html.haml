@@ -8,9 +8,16 @@
 		%ul
 			- @project.errors.full_messages.eac do |msg|
 				%li= msg
-	= f.label :title
+
+	= f.label :title, "Title"
 	%br
 	= f.text_field :title
+
+	%br
+	%br
+	= f.label :description, "Description"
+	%br
+	= f.text_area :description
 
 	%br
 	%br

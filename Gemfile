@@ -35,6 +35,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Logan's additions
 # HAML because I hate ERB
 gem 'haml', '~> 4.0.7'
+# Redcarpet for project content parsing
+gem 'redcarpet', '~> 3.3.2'
+# Pygments for syntax highlighing after parsing
+gem 'pygments.rb', '~> 0.6.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

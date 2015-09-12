@@ -2,9 +2,15 @@
 // Set some basic elements
 // Note: Add mixins, variables for color before any more styling
 
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, figure {
 	margin: 0;
 	padding: 0;
+}
+
+// Lists
+// Question: Why can I not retain the list circles when setting padding to 0?
+ul, ol {
+	margin: 0;
 }
 
 // Basic Styling
@@ -27,7 +33,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 // Headings

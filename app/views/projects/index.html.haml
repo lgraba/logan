@@ -10,6 +10,7 @@
 						%h3
 							%span.project-title= link_to project.title, project
 							%span.sub_title= project.created_at.strftime("%A, %b %d")
+							%span= project.tag_list
 						= image_tag "http://lorempixel.com/100/100/", alt: "Project Image"
 						%p.description
 							=h truncate(project.description, :length => 300)

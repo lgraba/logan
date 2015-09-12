@@ -40,6 +40,8 @@ gem 'redcarpet', '~> 3.3.2'
 gem 'pygments.rb', '~> 0.6.3'
 # Friendly ID for human- and SEO-friendly permalinks
 gem 'friendly_id', '~> 5.1.0'
+# Acts-as-taggable-on for project tagging
+gem 'acts-as-taggable-on', '~> 3.5.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

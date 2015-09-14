@@ -42,6 +42,12 @@ gem 'pygments.rb', '~> 0.6.3'
 gem 'friendly_id', '~> 5.1.0'
 # Acts-as-taggable-on for project tagging
 gem 'acts-as-taggable-on', '~> 3.5.0'
+# Paperclip for image attachment with projects
+gem 'paperclip', '~> 4.3.1'
+# Amazon S3 for image storage (Heroku only allows read access)
+gem 'aws-sdk', '~> 2.1.20'
+# Devise for Logan authentication
+gem 'devise', '~> 3.5.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

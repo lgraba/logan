@@ -45,7 +45,8 @@ gem 'acts-as-taggable-on', '~> 3.5.0'
 # Paperclip for image attachment with projects
 gem 'paperclip', '~> 4.3.1'
 # Amazon S3 for image storage (Heroku only allows read access)
-gem 'aws-sdk', '~> 2.1.20'
+# Took out version declaration '~> 2.1.20'
+gem 'aws-sdk'
 # Devise for Logan authentication
 gem 'devise', '~> 3.5.2'
 

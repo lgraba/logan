@@ -3,8 +3,8 @@
 - if @project.link
 	%a.link{:href => @project.link, :target => "_blank"}
 		Check it out!
-		- if @project.project_image.url
-			= image_tag @project.project_image.url(:medium)
+- if @project.project_image_file_name
+	= image_tag @project.project_image.url(:medium)
 %p= @project.description
 = markdown @project.content
 

@@ -39,12 +39,11 @@ GEM
     acts-as-taggable-on (3.5.0)
       activerecord (>= 3.2, < 5)
     arel (6.0.3)
-    aws-sdk (2.1.20)
-      aws-sdk-resources (= 2.1.20)
-    aws-sdk-core (2.1.20)
-      jmespath (~> 1.0)
-    aws-sdk-resources (2.1.20)
-      aws-sdk-core (= 2.1.20)
+    aws-sdk (1.66.0)
+      aws-sdk-v1 (= 1.66.0)
+    aws-sdk-v1 (1.66.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -81,8 +80,6 @@ GEM
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jmespath (1.0.2)
-      multi_json (~> 1.0)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -190,7 +187,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 3.5.0)
-  aws-sdk
+  aws-sdk (< 2.0)
   byebug
   coffee-rails (~> 4.1.0)
   devise (~> 3.5.2)

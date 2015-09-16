@@ -19,8 +19,18 @@ $button-width: 6em;
 	margin: 0 auto;
 }
 
+.skinny-wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
+
 .button {
 	width: $button-width;
 	position: relative;
 	left: calc(50% - #{$button-width});
+}
+
+.notice, .alert {
+	margin: 1em;
+	float: left;
 }

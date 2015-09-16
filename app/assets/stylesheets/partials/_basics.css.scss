@@ -74,6 +74,11 @@ p, li, ol {
 }
 
 // Inputs
+
 input, textarea {
 	width: 100%;
+
+	&[type="checkbox"] {
+		width: 1em;
+	}
 }

@@ -17,10 +17,17 @@
 		%link{:href => "https://fonts.googleapis.com/css?family=Open+Sans|Montserrat|Titillium+Web|Poiret+One|Lobster|Josefin+Sans|Lato", :rel => "stylesheet", :type => "text/css"}
 
 	%body
+
+		-if user_signed_in?
+			#signed_in
+				= link_to destroy_user_session_path, method: :delete do
+					= image_tag "Logan1.svg", :class => "logo"
+
 		-if notice
 			%p.notice= notice
 		-elsif alert
 			%p.alert= alert
+			
 		%section#main
 			= yield
 

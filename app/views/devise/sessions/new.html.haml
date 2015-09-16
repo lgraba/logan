@@ -1,5 +1,5 @@
 %h1#page_title Log In
-.wrapper
+.skinny-wrapper
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
       = f.label :email
@@ -15,5 +15,5 @@
         = f.label :remember_me
         %br
     .actions
-      = f.submit "Log In"
-= render "devise/shared/links"
+      = f.submit "Log In", class: "button"
+  = render "devise/shared/links"

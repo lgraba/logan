@@ -1,11 +1,36 @@
+$border: #ccc;
+$light: #ccc;
+$dark: #000;
+
 .content_box {
 	height: 20em;
 }
 
-.signed_in {
-
+#signed_in {
+	float: left;
+	.logo {
+		width: 25px;
+		margin: .5em;
+	}
 }
 
-.sign_out {
+#admin_links {
+	border-top: 1px solid $border;
+	border-bottom: 1px solid $border;
+	text-align: center;
+	padding: 1em 0;
+	margin: 3em 0;
 	
+	a {
+		color: $light;
+		margin: 0 1em;
+		font-weight: 700;
+		font-size: .8em;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		&:hover {
+			color: $dark;
+		}
+	}
 }

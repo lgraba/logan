@@ -9,39 +9,39 @@
 			- @project.errors.full_messages.eac do |msg|
 				%li= msg
 
-	= f.label :title, "Title"
+	= f.label :title
 	%br
 	= f.text_field :title
 
 	%br
 	%br
-	= f.label :description, "Description"
+	= f.label :description
 	%br
 	= f.text_area :description
 
 	%br
 	%br
-	= f.label :tag_list, "Tags"
+	= f.label :tag_list
 	%br
-	= f.text_area :tag_list
+	= f.text_field :tag_list
 
 	%br
 	%br
-	= f.label :project_image, "Project Image"
+	= f.label :project_image
 	%br
 	= f.file_field :project_image
 
 	%br
 	%br
-	= f.label :link, "Link"
+	= f.label :link
 	%br
 	= f.text_field :link
 
 	%br
 	%br
-	= f.label :content, "Write about your project here, Logan!"
+	= f.label :content
 	%br
-	= f.text_area :content
+	= f.text_area :content, :class => "content_box"
 
 	%br
 	%br

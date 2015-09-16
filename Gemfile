@@ -47,6 +47,8 @@ gem 'paperclip', '~> 4.3.1'
 # Amazon S3 for image storage (Heroku only allows read access)
 # Took out version declaration '~> 2.1.20'
 gem 'aws-sdk', '< 2.0'
+# Mail_Form for contact form
+gem 'mail_form', '~> 1.5.1'
 # Devise for Logan authentication
 gem 'devise', '~> 3.5.2'
 

@@ -1,18 +1,14 @@
-#content
-	.inner
-		%h1.title My Projects
-		%hr
-		%p.sub_title Check out some of my most recent projects!
-		.projects
-			%ul
-				- @projects.each do |project|
-					%li.project
-						%h3
-							%span.project-title= link_to project.title, project
-							%span.sub_title= project.created_at.strftime("%A, %b %d")
-							%span= project.tag_list
-						- if project.project_image_file_name
-							= image_tag project.project_image.url(:thumb)
-						%p.description
-							=h truncate(project.description, :length => 300)
-						%hr.mini
+%h1.page_title My Projects
+%hr
+%p.sub_title Check out some of my most recent projects!
+%ul
+	- @projects.each do |project|
+		%li.project
+			%h3
+				%span.project_title= link_to project.title, project
+				%span.project_created= project.created_at.strftime("%A, %b %d")
+				%span= project.tag_list
+			- if project.project_image_file_name
+				= image_tag project.project_image.url(:thumb)
+			%p.project_description
+				=h truncate(project.description, :length => 300)

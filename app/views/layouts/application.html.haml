@@ -17,6 +17,10 @@
 		%link{:href => "https://fonts.googleapis.com/css?family=Open+Sans|Montserrat|Titillium+Web|Poiret+One|Lobster|Josefin+Sans|Lato", :rel => "stylesheet", :type => "text/css"}
 
 	%body
+		-if notice
+			%p.notice= notice
+		-elsif alert
+			%p.alert= alert
 		%section#main
 			= yield
 

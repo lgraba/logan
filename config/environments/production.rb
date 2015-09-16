@@ -87,7 +87,7 @@ Rails.application.configure do
     }
   }
 
-  # For SendGrid
+  # For SendGrid and Devise
   config.action_mailer.default_url_options = { host: 'https://desolate-shore-9338.herokuapp.com'}
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {

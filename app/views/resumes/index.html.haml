@@ -1,0 +1,14 @@
+%h1#page_title My Resume
+%hr
+%p.sub_title Here is my most recent resume!
+.wrapper
+	%ul
+		- @resume = Resume.first
+		%li.resume
+			%h3
+				%span.title= link_to @resume.title, @resume
+				%span.created= @resume.updated_at.strftime("%A, %b %d")
+				- if @resume.resume_file
+					%a.link{:href => @resume.resume_file}
+						Download
+			%p.content= markdown @resume.content

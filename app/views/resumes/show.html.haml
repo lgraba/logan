@@ -1,0 +1,11 @@
+%h1#page_title= @resume.title
+- if @resume.resume_file
+	%a.link{:href => @resume.resume_file}
+		Download
+.wrapper
+	= markdown @resume.content
+
+	-if user_signed_in?
+		#admin_links
+			= link_to "Edit", edit_resume_path(@resume)
+			= link_to "Delete", resume_path(@resume), method: :delete, data: { confirm: "Are you sure you want to delete this resume?" }

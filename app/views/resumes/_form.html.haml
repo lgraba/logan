@@ -1,0 +1,30 @@
+-# Form for resume
+
+= form_for(@resume, multipart: true) do |f|
+	- if @resume.errors.any?
+		%h2
+			= pluralize(@resume.errors.count, "error")
+			prevented this resume from saving:
+		%ul
+			- @resume.errors.full_messages.eac do |msg|
+				%li= msg
+
+	= f.label :title
+	%br
+	= f.text_field :title
+
+	%br
+	%br
+	= f.label :resume_file
+	%br
+	= f.file_field :resume_file
+
+	%br
+	%br
+	= f.label :content
+	%br
+	= f.text_area :content, :class => "content_box"
+
+	%br
+	%br
+	= f.submit

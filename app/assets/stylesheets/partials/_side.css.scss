@@ -1,6 +1,36 @@
 // _side.css.scss
 // The sidebar navigation
-// Note: Add mixins and variables before any more styling
+
+// Box base colors
+$side-1: #3D3F4E;
+$side-2: #3D3F4E;
+$side-3: #494C5E;
+$side-4: #5A5E73;
+$side-5: #333333; // Github Grey
+$side-6: #55ACEE; // Twitter Blue
+$side-7: #5A5E73;
+// Box hover colors
+$side-hover-1: #494C5E;
+$side-hover-2: #494C5E;
+$side-hover-3: #494C5E;
+$side-hover-4: #494C5E;
+$side-hover-5: #494C5E;
+$side-hover-6: #494C5E;
+$side-hover-7: #494C5E;
+//Logo
+$logo: #333333;
+$logo-hover: #FFFFFF;
+
+@mixin side-box() {
+	border: 1px solid #FFFFFF;
+	display: table;
+	transition: all .3s ease-in-out;
+	border-radius: 3px;
+}
+
+.left, .right {
+	float: left;
+}
 
 #side {
 	width: 400px;
@@ -9,42 +39,73 @@
 	top: 0;
 	bottom: 0;
 
-	// Home link
-	#home {
-		background: #3D3F4E;
-		height: 10vh;
-		width: 100%;
-		display: table;
-		border: 1px solid #FFFFFF;
-		padding: 0 2rem;
-		transition: all .3s ease-in-out;
-		border-radius: 3px;
+	// Home logo and link
+	#top {
+		
 
-		.inner {
-			display: table-cell;
-			vertical-align: middle;
-			text-align: center;
+		.logo {
+			@include side-box();
+			height: 8vh;
+			width: 80px;
+			padding: .5rem 0 0 0;
+			background: $side-1;
+			overflow: hidden;
+			
+			.inner {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
 
-			h2 {
-				font-size: 2em;
-				color: #73768F;
-				text-transform: uppercase;
-				margin: 0;
+				.logan-logo {
+					width: 3em;
+					height: 3em;
+					fill: $logo;
+				}
+			}
 
-				span {
-					color: #FFF;
-					display: block;
-					font-weight: 700;
+			&:hover {
+				background: $side-hover-1;
+				.logan-logo {
+					width: 3.5em;
+					height: 3.5em;
+					fill: $logo-hover;
+					transition: all .5s ease-in-out;
 				}
 			}
 		}
 
-		&:hover {
-			background: #72BBD8;
+		.name {
+			@include side-box();
+			height: 8vh;
+			width: 320px;
+			padding: .5rem 0;
+			background: $side-1;
 
 			.inner {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+
 				h2 {
-					color: #C4EDFF;
+					font-size: 2em;
+					color: #73768F;
+					margin: 0;
+
+					span {
+						color: #FFF;
+						display: block;
+						font-weight: 700;
+					}
+				}
+			}
+
+			&:hover {
+				background: $side-hover-1;
+
+				.inner {
+					h2 {
+						color: #C4EDFF;
+					}
 				}
 			}
 		}
@@ -63,13 +124,11 @@
 
 	// Projects link
 	#projects {
-		background: #3D3F4E;
-		height: 40vh;
-		display: table;
-		border: 1px solid #FFFFFF;
+		@include side-box();
+		background: $side-2;
+		height: 42vh;
+		width: 100%;
 		padding: 0 3.5rem;
-		transition: all .3s ease-in-out;
-		border-radius: 3px;
 
 		.inner {
 			display: table-cell;
@@ -84,16 +143,14 @@
 					font-size: 1.5em;
 					color: #FFF;
 					display: block;
-					/** text-transform: uppercase; */
-					border: 2px solid #fff;
-					border-radius: 3px;
+					text-transform: uppercase;
 					text-align: center;
 				}
 			}
 		}
 
 		&:hover {
-			background: #72BBD8;
+			background: $side-hover-2;
 
 			.inner {
 				h2 {
@@ -116,14 +173,8 @@
 
 	// Bottom links in sidebar
 	#bottom {
-		.left, .right {
-			float: left;
-		}
 		.resume, .contact, .github, .twitter, .about {
-			border: 1px solid #FFFFFF;
-			display: table;
-			transition: all .3s ease-in-out;
-			border-radius: 3px;
+			@include side-box();
 
 			.inner {
 				display: table-cell;
@@ -141,11 +192,11 @@
 		.resume {
 			height: 50vh;
 			width: 200px;
-			background: #494C5E;
+			background: $side-3;
 			font-size: 1.25em;
 
 			&:hover {
-				background: #CC181E;
+				background: $side-hover-3;
 			}
 		}
 
@@ -153,10 +204,10 @@
 		.contact {
 			width: 200px;
 			height: 17.5vh;
-			background: #5A5E73;
+			background: $side-4;
 
 			&:hover {
-				background: #EA4C89;
+				background: $side-hover-4;
 			}
 		}
 
@@ -164,21 +215,21 @@
 		.github {
 			width: 100px;
 			height: 32.5vh;
-			background: #3D3F4E;
+			background: $side-5;
 
 			&:hover {
-				background: #333333; // Github Grey
+				background: $side-hover-5;
 			}
 		}
 
-		// TWitter Link
+		// Twitter Link
 		.twitter {
 			width: 100px;
 			height: 20vh;
-			background: #494C5E;
+			background: $side-6;
 
 			&:hover {
-				background: #55ACEE; // Twitter Blue
+				background: $side-hover-6;
 			}
 		}
 
@@ -186,10 +237,10 @@
 		.about {
 			width: 100px;
 			height: 12.5vh;
-			background: #5A5E73;
+			background: $side-7;
 
 			&:hover {
-				background: #57AD68;
+				background: $side-hover-7;
 			}
 		}
 	}

@@ -97,17 +97,11 @@ This will be a personal site for myself!
   - Greyscale with small splashes of color
 
 ### ToDo
-1. Projects: Image(s) Attachment
-  - Multiple images?
-  - Images throughout project post?
-2. Projects: Tags
+1. Projects: Tags
   - Available gems for tagging?
-3. Authentication of administrator and protection of administrator areas
-4. Resume page
-5. About page
-6. Contact form page
-  - Keep list of email addresses submitted in database? Would need new model.
-7. Styling
+2. Resume page
+3. About page
+4. Styling
   - Projects
   - Project#show
   - Resume - HTML version of resume - simple

@@ -19,9 +19,9 @@
 	%body
 
 		-if user_signed_in?
-			#signed_in
+			%span#signed_in
 				= link_to destroy_user_session_path, method: :delete do
-					= image_tag "Logan1.svg", :class => "logo"
+					= inline_svg "Logan1.svg", class: 'logo'
 
 		-if notice
 			%p.notice= notice
@@ -32,11 +32,18 @@
 			= yield
 
 		%section#side
-			= link_to root_path do
-				%span#home.current
-					.inner
-						%h2
-							%span Logan Graba
+			#top
+				.left
+					= link_to root_path do
+						%span.logo
+							%span.inner
+								= inline_svg "Logan1.svg", class: 'logan-logo'
+				.right
+					= link_to root_path do
+						%span.name
+							%span.inner
+								%h2
+									%span Logan Graba
 			= link_to projects_path do
 				%span#projects
 					%span.inner

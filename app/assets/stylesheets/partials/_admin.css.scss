@@ -7,10 +7,18 @@ $dark: #000;
 }
 
 #signed_in {
-	float: left;
+	position: absolute;
+	top: 0;
+
 	.logo {
-		width: 25px;
+		width: 2em;
+		height: 2em;
 		margin: .5em;
+		fill: $light;
+
+		&:hover {
+			fill: $dark;
+		}
 	}
 }
 

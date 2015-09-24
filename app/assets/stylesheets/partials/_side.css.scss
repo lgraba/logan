@@ -73,19 +73,21 @@ $logo-hover: #eeeeee;
 				display: table-cell;
 				vertical-align: middle;
 				text-align: center;
+				overflow: hidden;
 
 				.logan-logo {
-					width: 3em;
-					height: 3em;
+					width: 3.1rem;
+					height: 3.1rem;
 					fill: $logo;
 				}
 			}
 
 			&:hover {
+				padding: .3rem 0 0 0;
 				background: $side-hover-1;
 				.logan-logo {
-					width: 3.5em;
-					height: 3.5em;
+					width: 3.4rem;
+					height: 3.4rem;
 					fill: $logo-hover;
 					transition: all .5s ease-in-out;
 				}
@@ -147,6 +149,16 @@ $logo-hover: #eeeeee;
 		width: 100%;
 		padding: 0 3.5rem;
 
+		&.current {
+			background: $side-active-1;
+
+			.inner {
+				h2 {
+					color: #C4EDFF;
+				}
+			}
+		}
+
 		.inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -160,7 +172,7 @@ $logo-hover: #eeeeee;
 					font-size: 1.5em;
 					color: #FFF;
 					display: block;
-					text-transform: uppercase;
+					// text-transform: uppercase;
 					text-align: center;
 				}
 			}
@@ -168,17 +180,6 @@ $logo-hover: #eeeeee;
 
 		&:hover {
 			background: $side-hover-2;
-
-			.inner {
-				h2 {
-					color: #C4EDFF;
-				}
-			}
-		}
-
-		// Currently active projects link
-		&.current {
-			background: #72BBD8;
 
 			.inner {
 				h2 {

@@ -14,7 +14,28 @@
 		%meta{:name => "description", :content => "My name is Logan Graba. Developer, student, and Go enthusiast. I like to solve problems."}
 
 		%link{:rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"}
-		%link{:href => "https://fonts.googleapis.com/css?family=Open+Sans|Montserrat|Titillium+Web|Poiret+One|Lobster|Josefin+Sans|Lato", :rel => "stylesheet", :type => "text/css"}
+		%link{:href => "https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700italic|Source+Sans+Pro:400,700,700italic|PT+Sans:400,700,700italic|Raleway:400,700,500,600|Arimo:400,700,700italic|Noto+Sans:400,700,700italic|Arvo:400,700,700italic|Oxygen:400,700|Lobster|Fjalla+One|Passion+One:400,700|Nunito:400,700|Signika:400,600,700|Shadows+Into+Light|Maven+Pro:400,700,900|Pacifico|Crimson+Text:400,700,700italic,600|Karla:400,700,700italic|Varela+Round|Dancing+Script|Exo:400,700,700italic,900,900italic,800italic,800,600italic,600,500italic,500,400italic,300italic,300,200italic,200,100italic,100", :rel => "stylesheet", :type => "text/css"}
+
+		-# Fonts:
+		-# Roboto Condensed
+		-# Source Sans Pro
+		-# PT Sans
+		-# Raleway * (X)
+		-# Arimo (X)
+		-# Noto Sans
+		-# Arvo
+		-# Oxygen
+		-# Lobster
+		-# Fjalla One
+		-# Passion One *
+		-# Nunito *
+		-# Signika *
+		-# Shadows Into Light
+		-# Maven Pro *
+		-# Pacifico (s)
+		-# Crimson Text
+		-# Karla *
+		-# Varela Round *
 
 		= favicon_link_tag 'Logan2.svg'
 
@@ -37,15 +58,26 @@
 			#top
 				.left
 					= link_to root_path do
-						%span.logo
-							%span.inner
-								= inline_svg "Logan1.svg", class: 'logan-logo'
+						- if current_page?(root_path)
+							%span.logo.current
+								%span.inner
+									= inline_svg "Logan1.svg", class: 'logan-logo'
+						- else
+							%span.logo
+								%span.inner
+									= inline_svg "Logan1.svg", class: 'logan-logo'
 				.right
 					= link_to root_path do
-						%span.name
-							%span.inner
-								%h2
-									%span Logan Graba
+						- if current_page?(root_path)
+							%span.name.current
+								%span.inner
+									%h2
+										%span Logan Graba
+						-else
+							%span.name
+								%span.inner
+									%h2
+										%span Logan Graba
 			.left
 				= link_to projects_path do
 					%span#projects

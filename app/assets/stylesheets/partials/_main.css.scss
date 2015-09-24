@@ -10,6 +10,15 @@ $button-width: 6em;
 	padding-right: 400px;
 }
 
+// For responsivity
+@media (max-width: 800px) {
+	#main {
+		width: 100%;
+		height: calc(100vh - 300px);
+		padding: 0px;
+	}
+}
+
 #page_title {
 	text-align: center;
 }

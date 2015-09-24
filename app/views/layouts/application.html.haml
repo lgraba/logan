@@ -16,6 +16,8 @@
 		%link{:rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"}
 		%link{:href => "https://fonts.googleapis.com/css?family=Open+Sans|Montserrat|Titillium+Web|Poiret+One|Lobster|Josefin+Sans|Lato", :rel => "stylesheet", :type => "text/css"}
 
+		= favicon_link_tag 'Logan2.svg'
+
 	%body
 
 		-if user_signed_in?
@@ -44,14 +46,15 @@
 							%span.inner
 								%h2
 									%span Logan Graba
-			= link_to projects_path do
-				%span#projects
-					%span.inner
-						%h2
-							%span Projects
-							Check out some of my latest projects.
-							%br
-							PHP, Ruby on Rails, Python, Painting, and Go
+			.left
+				= link_to projects_path do
+					%span#projects
+						%span.inner
+							%h2
+								%span Projects
+								Check out some of my latest projects.
+								%br
+								PHP, Ruby on Rails, Python, Painting, and Go
 			#bottom
 				.left
 					= link_to resumes_path do

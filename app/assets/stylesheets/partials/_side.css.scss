@@ -21,11 +21,21 @@ $side-hover-7: #494C5E;
 $logo: #333333;
 $logo-hover: #FFFFFF;
 
+// For standard sidebar boxes
 @mixin side-box() {
 	border: 1px solid #FFFFFF;
 	display: table;
 	transition: all .3s ease-in-out;
 	border-radius: 3px;
+}
+
+// Clearfix
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 .left, .right {
@@ -244,4 +254,229 @@ $logo-hover: #FFFFFF;
 			}
 		}
 	}
+}
+
+// Media Queries for smaller screens
+// Place sidebar on bottom!
+@media (max-width: 800px) {
+	#side {
+		width: 100%;
+		height: 300px;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		top: calc(100vh - 300px);
+
+		// Home logo and link
+		#top {
+			@include clearfix;
+
+			.logo {
+				@include side-box();
+				height: 80px;
+				width: 15vw;
+				padding: .5rem 0 0 0;
+				background: $side-1;
+				overflow: hidden;
+				
+				.inner {
+					display: table-cell;
+					vertical-align: middle;
+					text-align: center;
+
+					.logan-logo {
+						width: 3em;
+						height: 3em;
+						fill: $logo;
+					}
+				}
+
+				&:hover {
+					background: $side-hover-1;
+					.logan-logo {
+						width: 3.5em;
+						height: 3.5em;
+						fill: $logo-hover;
+						transition: all .5s ease-in-out;
+					}
+				}
+			}
+
+			.name {
+				@include side-box();
+				height: 80px;
+				width: 35vw;
+				padding: .5rem 0;
+				background: $side-1;
+
+				.inner {
+					display: table-cell;
+					vertical-align: middle;
+					text-align: center;
+
+					h2 {
+						font-size: 2em;
+						color: #73768F;
+						margin: 0;
+
+						span {
+							color: #FFF;
+							display: block;
+							font-weight: 700;
+						}
+					}
+				}
+
+				&:hover {
+					background: $side-hover-1;
+
+					.inner {
+						h2 {
+							color: #C4EDFF;
+						}
+					}
+				}
+			}
+
+			// Currently active homepage link
+			&.current {
+				background: #72BBD8;
+
+				.inner {
+					h2 {
+						color: #C4EDFF;
+					}
+				}
+			}
+		}
+
+		// Projects link
+		#projects {
+			@include side-box();
+			
+			background: $side-2;
+			height: 220px;
+			width: 50vw;
+			padding: 0 3.5rem;
+
+			.inner {
+				display: table-cell;
+				vertical-align: middle;
+
+				h2 {
+					font-size: 1.25em;
+					color: #73768F;
+					margin: 0;
+
+					span {
+						font-size: 1em;
+						color: #FFF;
+						display: block;
+						text-transform: uppercase;
+						text-align: center;
+					}
+				}
+			}
+
+			&:hover {
+				background: $side-hover-2;
+
+				.inner {
+					h2 {
+						color: #C4EDFF;
+					}
+				}
+			}
+
+			// Currently active projects link
+			&.current {
+				background: #72BBD8;
+
+				.inner {
+					h2 {
+						color: #C4EDFF;
+					}
+				}
+			}
+		}
+
+		// Bottom links in sidebar
+		#bottom {
+
+			position: relative;
+			top: -80px;
+			
+			.resume, .contact, .github, .twitter, .about {
+				@include side-box();
+
+				.inner {
+					display: table-cell;
+					vertical-align: middle;
+					text-align: center;
+					color: #FFF;
+				}
+
+				i {
+					font-size: 1.75em;
+				}
+			}
+
+			// Resume Link
+			.resume {
+				height: 300px;
+				width: 20vw;
+				background: $side-3;
+				font-size: 1.25em;
+
+				&:hover {
+					background: $side-hover-3;
+				}
+			}
+
+			// Contact Link
+			.contact {
+				height: 150px;
+				width: 30vw;
+				background: $side-4;
+
+				&:hover {
+					background: $side-hover-4;
+				}
+			}
+
+			// Github Link
+			.github {
+				height: 150px;
+				width: 15vw;
+				background: $side-5;
+
+				&:hover {
+					background: $side-hover-5;
+				}
+			}
+
+			// Twitter Link
+			.twitter {
+				height: 75px;
+				width: 15vw;
+				background: $side-6;
+
+				&:hover {
+					background: $side-hover-6;
+				}
+			}
+
+			// About Link
+			.about {
+				height: 75px;
+				width: 15vw;
+				background: $side-7;
+
+				&:hover {
+					background: $side-hover-7;
+				}
+			}
+		}
+	}
+
 }

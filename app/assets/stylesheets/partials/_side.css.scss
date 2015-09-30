@@ -293,8 +293,8 @@ $logo-hover: #eeeeee;
 					text-align: center;
 
 					.logan-logo {
-						width: 3em;
-						height: 3em;
+						width: 2.2em;
+						height: 2.2em;
 						fill: $logo;
 					}
 				}
@@ -302,8 +302,8 @@ $logo-hover: #eeeeee;
 				&:hover {
 					background: $side-hover-1;
 					.logan-logo {
-						width: 3.5em;
-						height: 3.5em;
+						width: 2.2em;
+						height: 2.2em;
 						fill: $logo-hover;
 						transition: all .5s ease-in-out;
 					}
@@ -323,7 +323,7 @@ $logo-hover: #eeeeee;
 					text-align: center;
 
 					h2 {
-						font-size: 2em;
+						font-size: 1.2em;
 						color: #73768F;
 						margin: 0;
 
@@ -365,19 +365,19 @@ $logo-hover: #eeeeee;
 			background: $side-2;
 			height: 220px;
 			width: 50vw;
-			padding: 0 3.5rem;
+			padding: 0 1rem;
 
 			.inner {
 				display: table-cell;
 				vertical-align: middle;
 
 				h2 {
-					font-size: 1.25em;
+					font-size: 1em;
 					color: #73768F;
 					margin: 0;
 
 					span {
-						font-size: 1em;
+						font-size: 1.25em;
 						color: #FFF;
 						display: block;
 						text-transform: uppercase;
@@ -422,10 +422,11 @@ $logo-hover: #eeeeee;
 					vertical-align: middle;
 					text-align: center;
 					color: #FFF;
+					font-size: .8em;
 				}
 
 				i {
-					font-size: 1.75em;
+					font-size: .8em;
 				}
 			}
 

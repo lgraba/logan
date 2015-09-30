@@ -266,14 +266,14 @@ $logo-hover: #eeeeee;
 
 // Media Queries for smaller screens
 // Place sidebar on bottom!
-@media (max-width: 800px) {
+@media (max-width: 800px) and (orientation:portrait) {
 	#side {
 		width: 100%;
-		height: 300px;
+		height: 200px;
 		position: fixed;
 		left: 0;
 		bottom: 0;
-		top: calc(100vh - 300px);
+		top: calc(100vh - 200px);
 
 		// Home logo and link
 		#top {
@@ -281,7 +281,7 @@ $logo-hover: #eeeeee;
 
 			.logo {
 				@include side-box();
-				height: 80px;
+				height: 60px;
 				width: 15vw;
 				padding: .5rem 0 0 0;
 				background: $side-1;
@@ -312,7 +312,7 @@ $logo-hover: #eeeeee;
 
 			.name {
 				@include side-box();
-				height: 80px;
+				height: 60px;
 				width: 35vw;
 				padding: .5rem 0;
 				background: $side-1;
@@ -363,16 +363,16 @@ $logo-hover: #eeeeee;
 			@include side-box();
 			
 			background: $side-2;
-			height: 220px;
+			height: 140px;
 			width: 50vw;
-			padding: 0 1rem;
+			padding: .5rem 1rem;
 
 			.inner {
 				display: table-cell;
 				vertical-align: middle;
 
 				h2 {
-					font-size: 1em;
+					font-size: .8em;
 					color: #73768F;
 					margin: 0;
 
@@ -412,7 +412,7 @@ $logo-hover: #eeeeee;
 		#bottom {
 
 			position: relative;
-			top: -80px;
+			top: -60px;
 			
 			.resume, .contact, .github, .twitter, .about {
 				@include side-box();
@@ -432,7 +432,7 @@ $logo-hover: #eeeeee;
 
 			// Resume Link
 			.resume {
-				height: 300px;
+				height: 200px;
 				width: 20vw;
 				background: $side-3;
 				font-size: 1.25em;
@@ -444,7 +444,7 @@ $logo-hover: #eeeeee;
 
 			// Contact Link
 			.contact {
-				height: 150px;
+				height: 80px;
 				width: 30vw;
 				background: $side-4;
 
@@ -455,7 +455,7 @@ $logo-hover: #eeeeee;
 
 			// Github Link
 			.github {
-				height: 150px;
+				height: 120px;
 				width: 15vw;
 				background: $side-5;
 
@@ -466,7 +466,7 @@ $logo-hover: #eeeeee;
 
 			// Twitter Link
 			.twitter {
-				height: 75px;
+				height: 60px;
 				width: 15vw;
 				background: $side-6;
 
@@ -477,7 +477,7 @@ $logo-hover: #eeeeee;
 
 			// About Link
 			.about {
-				height: 75px;
+				height: 60px;
 				width: 15vw;
 				background: $side-7;
 

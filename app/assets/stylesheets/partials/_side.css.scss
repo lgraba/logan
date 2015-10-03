@@ -193,7 +193,9 @@ $logo-hover: #eeeeee;
 	#bottom {
 		.resume, .contact, .github, .twitter, .about {
 			@include side-box();
-
+			&.current {
+				background: $side-active-1;
+			}
 			.inner {
 				display: table-cell;
 				vertical-align: middle;

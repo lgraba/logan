@@ -98,20 +98,35 @@
 									PHP, Ruby on Rails, Python, Painting, and Go
 			#bottom
 				.left
-					= link_to resumes_path do
-						%span.resume
-							%span.inner
-								%span.fa-lg
-									%i.fa.fa-file-text-o
-								%br
-								Resume
+					= link_to('/resume') do
+						- if current_page?('/resume')
+							%span.resume.current
+								%span.inner
+									%span.fa-lg
+										%i.fa.fa-file-text-o
+									%br
+									Resume
+						- else
+							%span.resume
+								%span.inner
+									%span.fa-lg
+										%i.fa.fa-file-text-o
+									%br
+									Resume
 				.right
 					= link_to new_contact_path do
-						%span.contact
-							%span.inner
-								%i.fa.fa-envelope
-								%br
-								Contact
+						- if current_page?(new_contact_path)
+							%span.contact.current
+								%span.inner
+									%i.fa.fa-envelope
+									%br
+									Contact
+						- else
+							%span.contact
+								%span.inner
+									%i.fa.fa-envelope
+									%br
+									Contact
 					.left
 						= link_to "http://github.com/lgraba", target: "_blank" do
 							%span.github
@@ -127,8 +142,15 @@
 									%br
 									Twitter
 						= link_to about_path do
-							%span.about
-								%span.inner
-									%i.fa.fa-cogs
-									%br
-									About
+							- if current_page?(about_path)
+								%span.about.current
+									%span.inner
+										%i.fa.fa-cogs
+										%br
+										About
+							- else
+								%span.about
+									%span.inner
+										%i.fa.fa-cogs
+										%br
+										About

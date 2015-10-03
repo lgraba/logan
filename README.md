@@ -97,11 +97,10 @@ This will be a personal site for myself!
   - Greyscale with small splashes of color
 
 ### ToDo
-1. Projects: Tags
-  - Available gems for tagging?
-2. Resume page
-3. About page
-4. Styling
+1. Fix responsivity of sidebar menu
+  - I think using something like breakpoint would be beneficial
+  - There is an issue with the way the menu is displayed on screens smaller than 800px - Nothing to the right of the Resume link is shown when the main content is long enough to require a scrollbar.
+2. Content Styling
   - Projects
   - Project#show
   - Resume - HTML version of resume - simple
@@ -109,3 +108,5 @@ This will be a personal site for myself!
   - Site-wide colors (make variables in SCSS)
   - Refactor SCSS already written
   - Forms
+3. Testing
+  - Take a look at some test suites to help this process along

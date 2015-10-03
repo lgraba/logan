@@ -1,4 +1,20 @@
 %h1#page_title About Logan
-%hr
-%p.sub_title
-	Lorem ipsum etc.
+.wrapper
+	%hr
+	%p.sub_title
+		I live in Longmont, CO currently and like working on various programming projects in my free time. I am always learning and have lately been working in Ruby on Rails in addition to PHP, Python, and other languages. I wanted a place to display the projects I'm working on, as well as present information to prospective employers and clients.
+	%br
+	%p.sub_title
+		I've been working on this site for a couple weeks on and off and still have a lot to do: copy writing, styling, and the addition of projects I've done recently. I also need to figure out some hosting. It's currently hosted as an app on Heroku, but I am looking for a more permanent solution. I think I will purchase some hosting space elsewhere and then host my various projects on Heroku, which will be linked to in the
+		= link_to projects_path do
+			projects
+		section. This site is built in Ruby on Rails with the help of quite a few nice gems: HAML, Redcarpet, Friendly_ID, Acts-As-Taggable-On, Paperclip, AWS-SDK, Mail_Form, Devise, and Inline_SVG.
+	%br
+	%p.sub_title
+		If you wanted to get ahold of me just head on over to the
+		= link_to new_contact_path do
+			contact
+		page.
+	%br
+	%p.sub_title
+		I participate in a bowling league each week and enjoy playing the board game Go (Baduk in Korean, Weiqi in Chinese, and Igo in Japanese). I also like to paint, and have been painting in watercolor. Life is pretty great! Hope you're having a good day.

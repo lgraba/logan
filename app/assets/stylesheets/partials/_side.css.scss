@@ -288,7 +288,7 @@ $logo-hover: #eeeeee;
 				padding: .5rem 0 0 0;
 				background: $side-1;
 				overflow: hidden;
-				
+
 				.inner {
 					display: table-cell;
 					vertical-align: middle;
@@ -369,6 +369,16 @@ $logo-hover: #eeeeee;
 			width: 50vw;
 			padding: .5rem 1rem;
 
+			&.current {
+				background: $side-active-1;
+
+				.inner {
+					h2 {
+						color: #C4EDFF;
+					}
+				}
+			}
+
 			.inner {
 				display: table-cell;
 				vertical-align: middle;
@@ -390,17 +400,6 @@ $logo-hover: #eeeeee;
 
 			&:hover {
 				background: $side-hover-2;
-
-				.inner {
-					h2 {
-						color: #C4EDFF;
-					}
-				}
-			}
-
-			// Currently active projects link
-			&.current {
-				background: #72BBD8;
 
 				.inner {
 					h2 {

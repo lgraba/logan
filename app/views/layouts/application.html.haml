@@ -39,6 +39,8 @@
 
 		= favicon_link_tag 'Logan2.svg'
 
+		= render 'layouts/footer'
+
 	%body
 
 		-if user_signed_in?
@@ -154,5 +156,3 @@
 										%i.fa.fa-cogs
 										%br
 										About
-										
-		= render 'layouts/footer'

@@ -49,6 +49,11 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (6.0.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -162,6 +167,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sitemap_generator (5.1.0)
+      builder
     spring (1.4.0)
     sprockets (3.3.4)
       rack (~> 1.0)
@@ -196,6 +203,7 @@ DEPENDENCIES
   acts-as-taggable-on (~> 3.5.0)
   aws-sdk (< 2.0)
   byebug
+  carrierwave
   coffee-rails (~> 4.1.0)
   devise (~> 3.5.2)
   friendly_id (~> 5.1.0)
@@ -212,6 +220,7 @@ DEPENDENCIES
   redcarpet (~> 3.3.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  sitemap_generator
   spring
   sqlite3
   turbolinks

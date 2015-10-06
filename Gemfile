@@ -53,6 +53,11 @@ gem 'mail_form', '~> 1.5.1'
 gem 'devise', '~> 3.5.2'
 # Inline_SVG for logos
 gem 'inline_svg', '~> 0.6.1'
+# Sitemap_generator for sitemap.xml
+gem 'sitemap_generator'
+# Carrierwave for communicating generated sitemap
+# It would be useful to check out some alternatives like FOG?
+gem 'carrierwave'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'resume' => 'resumes#index'
   get 'about' => 'about#index'
+  get '/sitemap.xml.gz' => 'sitemap#show'
   get '*path' => redirect('/')
 end

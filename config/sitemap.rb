@@ -48,7 +48,7 @@ SitemapGenerator::Sitemap.create do
 end
 
 # Ping Google and Bing
-SitemapGenerator::Sitemap.ping_search_engines
+# SitemapGenerator::Sitemap.ping_search_engines
 
 
 # SitemapGenerator::Sitemap.sitemaps_host = "http://s3.amazonaws.com/sitemap-generator/"

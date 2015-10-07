@@ -28,21 +28,23 @@
 
 # config/sitemap.rb
 
-# SitemapGenerator::Sitemap.create do
-#   add '/projects', 'changefreq': 'weekly'
-#   Project.find_each do |project|
-#     add project_path(project), lastmod: project.updated_at
-#   end
-#   add '/resume', 'changefreq': 'weekly'
-#   add '/contacts/new', 'changefreq': 'weekly'
-#   add '/about', 'changefreq': 'weekly'
-# end
+
 
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "http://www.logangraba.com"
 
 # pick a place safe to write the files
 SitemapGenerator::Sitemap.public_path = 'tmp/'
+
+SitemapGenerator::Sitemap.create do
+  add '/projects', 'changefreq': 'weekly'
+  Project.find_each do |project|
+    add project_path(project), lastmod: project.updated_at
+  end
+  add '/resume', 'changefreq': 'weekly'
+  add '/contacts/new', 'changefreq': 'weekly'
+  add '/about', 'changefreq': 'weekly'
+end
 
 # store on S3 using Fog
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new

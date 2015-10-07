@@ -30,7 +30,7 @@
 
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "http://www.logangraba.com"
-# inform the map cross-linking where to find the other maps
+# Inform the map cross-linking where to find the other maps
 SitemapGenerator::Sitemap.sitemaps_host = "http://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com/"
 # pick a place safe to write the files
 SitemapGenerator::Sitemap.public_path = 'tmp/'

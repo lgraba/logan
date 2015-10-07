@@ -2,6 +2,8 @@
 // Set some basic elements
 // Note: Add mixins, variables for color before any more styling
 
+$orange: #EB5255;
+
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, figure {
 	margin: 0;
 	padding: 0;
@@ -38,12 +40,18 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 300;
+	font-weight: 600;
+}
+.wrapper {
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 1em;
+		font-weight: 600;
+	}
 }
 
 // Links
 a {
-	color: #75BBD7;
+	color: $orange;
 	font-weight: 700;
 	text-decoration: none;
 

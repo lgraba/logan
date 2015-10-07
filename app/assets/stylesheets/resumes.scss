@@ -1,3 +1,22 @@
 // Place all the styles related to the resumes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$grey: #333333;
+$light-grey: #cecece;
+
+.resume {
+	p {
+		margin-top: 1em;
+	}
+}
+
+.title, .link {
+	a {
+		color: $grey;
+	}
+
+}
+.created {
+	color: $light-grey;
+}

@@ -39,23 +39,19 @@
 # end
 
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://logangraba.com"
+SitemapGenerator::Sitemap.default_host = "http://www.logangraba.com"
+
 # pick a place safe to write the files
 SitemapGenerator::Sitemap.public_path = 'tmp/'
-# store on S3 using Fog (pass in configuration values as shown above if needed)
+
+# store on S3 using Fog
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new
+
 # inform the map cross-linking where to find the other maps
 SitemapGenerator::Sitemap.sitemaps_host = "http://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com/"
+
 # pick a namespace within your bucket to organize your maps
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
-# SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
-#   fog_provider: 'AWS',
-#   aws_access_key_id: ENV[AWS_ACCESS_KEY_ID],
-#   aws_secret_access_key: ENV[AWS_SECRET_ACCESS_KEY],
-#   fog_directory: ENV[S3_BUCKET_NAME],
-#   fog_region: us-east-1
-# )
-
-
+# Ping Google and Bing
 SitemapGenerator::Sitemap.ping_search_engines
